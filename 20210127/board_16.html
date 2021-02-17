@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RealBridge Result</title>
+<style>
+table, th, td {
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+}
+tr.target {
+background-color: #fff133
+}
+</style>
+</head>
+<script type="text/javascript" 
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script> 
+<script type="text/javascript">
+<script type="text/javascript">
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const pair_index = urlParams.get('pair')
+$(document).ready(function(){
+                   $('#table_id tr td').each(function(){
+                                                       if ($(this).text() == 'Morris "Mojo" Jones & Ho Ming Yim') {
+                                                           $(this).parent().css('background-color','#fff133');
+                                                           }
+                                                           }); 
+                   });
+
+</script>
+<body>
+<p>
+    <table id="table_id">
+    <caption>Board 16</caption>
+    <tr><th>NS</th><th>EW</th><th>CONTRACT</th><th>LEAD</th><th>NS SCORE</th><th>EW SCORE</th><th>NS IMP</th><th>EW IMP</th><th>MOVIE</th></tr>
+    <tr><td>HoMing Y & Morris J</td><td>David K & Corliss S</td><td>4H	S</td><td>H5</td><td>-50</td><td>50</td><td>-3.33</td><td>3.33</td><td><a href ="https://www.bridgebase.com/tools/handviewer.html?lin=qx||pn|Morris%20J%23%2CCorliss%20S%23%2CHoMing%20Y%23%2CDavid%20K%23|st||md|2SA3HAQJ9DQ632CJ87%2CSQ98H875DA95CKQT5%2CSKJT4HKT43DJ87CA3%2C|rh||ah|Board%2016|sv|e|mb|p|mb|1D|mb|p|mb|1H|mb|p|mb|2H|mb|p|mb|4H|mb|p|mb|p|mb|p|pc|H5|pc|H3|pc|H2|pc|HA|pc|HQ|pc|H7|pc|H4|pc|H6|pc|HJ|pc|H8|pc|HT|pc|C6|pc|SA|pc|S8|pc|S4|pc|S2|pc|S3|pc|S9|pc|SK|pc|S5|pc|SJ|pc|S6|pc|C7|pc|SQ|pc|CK|pc|CA|pc|C2|pc|C8|pc|ST|pc|S7|pc|CJ|pc|C5|pc|D7|pc|D4|pc|DQ|pc|DA|pc|CQ|pc|C3|pc|C4|pc|H9|pc|D6|pc|D5|pc|D8|pc|DT|pc|DK|pc|D2|pc|D9|pc|DJ|pc|C9|pc|D3|pc|CT|pc|HK|mc|9|zz|50.00%25|pg||" target="_blank">Movie</a></td></tr>
+        <tr><td>Patrick S & Brian C</td><td>Tom L & Hanan M</td><td>5H	N</td><td>C2</td><td>-50</td><td>50</td><td>-3.33</td><td>3.33</td><td><a href ="https://www.bridgebase.com/tools/handviewer.html?lin=qx||pn|Brian%20C%23%2CTom%20L%23%2CPatrick%20S%23%2CHanan%20M%23|st||md|2SA3HAQJ9DQ632CJ87%2CSQ98H875DA95CKQT5%2CSKJT4HKT43DJ87CA3%2C|rh||ah|Board%2016|sv|e|mb|p|mb|1N|an|12-15%20balanced|mb|p|mb|2C|mb|d|mb|2H|mb|p|mb|3N|mb|p|mb|4S|mb|p|mb|5H|mb|p|mb|p|mb|p|pc|C2|pc|C7|pc|CT|pc|CA|pc|H3|pc|H2|pc|HA|pc|H5|pc|HQ|pc|H7|pc|H4|pc|H6|pc|HJ|pc|H8|pc|HT|pc|C4|pc|SA|pc|S8|pc|S4|pc|S2|pc|S3|pc|S9|pc|SJ|pc|S5|pc|SK|pc|S6|pc|C8|pc|SQ|pc|ST|pc|S7|pc|CJ|pc|D5|pc|D7|pc|D4|pc|DQ|pc|DA|pc|CK|pc|C3|pc|C6|pc|H9|pc|D2|pc|D9|pc|DJ|pc|DK|pc|DT|pc|D3|pc|C5|pc|D8|pc|C9|pc|D6|pc|CQ|pc|HK|mc|10|zz|50.00%25|pg||" target="_blank">Movie</a></td></tr>
+        <tr><td>Phil S & Michel T</td><td>Mark S & Steve R</td><td>4H	S</td><td>CK</td><td>420</td><td>-420</td><td>10.0</td><td>-10.0</td><td><a href ="https://www.bridgebase.com/tools/handviewer.html?lin=qx||pn|Michel%20T%23%2CMark%20S%23%2CPhil%20S%23%2CSteve%20R%23|st||md|2SA3HAQJ9DQ632CJ87%2CSQ98H875DA95CKQT5%2CSKJT4HKT43DJ87CA3%2C|rh||ah|Board%2016|sv|e|mb|p|mb|1D|mb|p|mb|1H|mb|p|mb|2H|mb|p|mb|4H|mb|p|mb|p|mb|p|pc|CK|pc|CA|pc|C6|pc|C7|pc|H3|pc|H2|pc|HA|pc|H5|pc|HQ|pc|H7|pc|H4|pc|H6|pc|H9|pc|H8|pc|HK|pc|C9|pc|C3|pc|C2|pc|C8|pc|CT|pc|S8|pc|SJ|pc|S7|pc|S3|pc|S4|pc|S6|pc|SA|pc|S9|pc|CJ|pc|CQ|pc|HT|pc|C4|pc|SK|pc|S2|pc|D2|pc|SQ|pc|ST|pc|S5|pc|D3|pc|D5|pc|D7|pc|D4|pc|DQ|pc|DA|pc|D9|pc|DJ|pc|DK|pc|D6|pc|DT|pc|HJ|pc|C5|pc|D8|mc|10|zz|50.00%25|pg||" target="_blank">Movie</a></td></tr>
+        <tr><td>Linda A & Ramey F</td><td>Jon L & Jeff L</td><td>4H	S</td><td>CK</td><td>-50</td><td>50</td><td>-3.33</td><td>3.33</td><td><a href ="https://www.bridgebase.com/tools/handviewer.html?lin=qx||pn|Ramey%20F%23%2CJeff%20L%23%2CLinda%20A%23%2CJon%20L%23|st||md|2SA3HAQJ9DQ632CJ87%2CSQ98H875DA95CKQT5%2CSKJT4HKT43DJ87CA3%2C|rh||ah|Board%2016|sv|e|mb|p|mb|1D|mb|p|mb|1H|mb|p|mb|2H|mb|p|mb|2N|an|%20%2A%20partner%20please%20describe%20your%20hand%20%5B44s%5D|mb|p|mb|3H|an|%20%2A%204%20h%20and%20weak%20%5B45s%5D|mb|p|mb|4H|mb|p|mb|p|mb|p|pc|CK|pc|CA|pc|C6|pc|C7|pc|H3|pc|H2|pc|HA|pc|H5|pc|C8|pc|CT|pc|C3|pc|C2|pc|H8|pc|H4|pc|H6|pc|H9|pc|CJ|pc|CQ|pc|HT|pc|C4|pc|S4|pc|S7|pc|SA|pc|S8|pc|S3|pc|S9|pc|SK|pc|S2|pc|ST|pc|S6|pc|HJ|pc|SQ|pc|D2|pc|D5|pc|DJ|pc|DK|pc|DT|pc|DQ|pc|DA|pc|D7|pc|D9|pc|D8|pc|D4|pc|D3|pc|C5|pc|SJ|pc|C9|pc|HQ|pc|D6|pc|H7|pc|HK|pc|S5|mc|9|zz|50.00%25|pg||" target="_blank">Movie</a></td></tr>
+        </table></p>
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const pair_index = urlParams.get('pair')
+</script> 
+</body>
+</html>
