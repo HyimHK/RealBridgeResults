@@ -1,0 +1,12 @@
+Hello,
+
+Below is your personal sign-in link for today's game. The session will open at 2:00PM this afternoon.
+
+REPLACE_ME 
+
+Your full name has been filled in for you. You do not need to enter an ID number. When you click on "login", if a seat was reserved for you, you will be automatically brought to your assigned seat, otherwise, please pick a seat across from your partner from the lobby view. 
+
+Please verify your camera and microphone is working prior to logging in. You can refresh the page to return to the login screen to change your settings.
+
+Best,
+HoMing
