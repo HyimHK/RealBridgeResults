@@ -58,21 +58,33 @@ def parse_contract(traveler):
         result = str(result) if result < 0 else "=" if not result else "+" + str(result)
     return suit_symbols(traveler.get('CONTRACT', '---').replace("PASS", "P")) + played_by + str(result)
 
-f = open(sys.argv[1])
+def parse_rankings(participants):
+    if data['USEBIO']['EVENT']["@EVENT_TYPE"] == "PAIRS":
+        if data['USEBIO']['EVENT']['WINNER_TYPE'] == "1":
+            return {pair['PAIR_NUMBER']:pair['PLACE'] for pair in participants['PAIR']}
+        else:
+            return {pair['PAIR_NUMBER']:" ".join([pair['PLACE'], pair['DIRECTION']]) for pair in participants['PAIR']}
+    else:
+        rankings = {}
+        for team in participants['TEAM']:
+            for pair in team["PAIR"]:
+                rankings[pair["PAIR_NUMBER"]] = team["PLACE"]
+        return rankings
+
+f = open(sys.argv[1], encoding='utf-8')
 data = f.readlines()
 f.close()
 
 data = "".join([d.strip() for d in data])
-data = xmltodict.parse(data)
+data = xmltodict.parse(data, xml_attribs=True)
 
+event_type = data['USEBIO']['EVENT']['@EVENT_TYPE']
 participants = data['USEBIO']['EVENT']['PARTICIPANTS']
 pairs = { pair['PAIR_NUMBER']:" and ".join([x['PLAYER_NAME'] for x in pair['PLAYER']]) for pair in participants['PAIR'] } \
 if 'PAIRS' in data['USEBIO']['EVENT']['@EVENT_TYPE'] else \
 { pair['PAIR_NUMBER']:" & ".join([x['PLAYER_NAME'] for x in pair['PLAYER']]) for team in participants['TEAM'] for pair in team['PAIR']}
 
-rankings = { pair['PAIR_NUMBER']:pair['PLACE'] for pair in participants['PAIR']} \
-    if data['USEBIO']['EVENT']['WINNER_TYPE'] == "1" \
-    else { pair['PAIR_NUMBER']:" ".join([pair['PLACE'], pair['DIRECTION']]) for pair in participants['PAIR']}
+rankings = parse_rankings(participants)
 
 results = {}
 
