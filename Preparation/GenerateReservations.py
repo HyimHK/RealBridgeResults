@@ -24,15 +24,19 @@ print(tables)
 
 for i, table in enumerate(tables):
     table[0] = random.sample(table[0], 2)
-    table[1] = random.sample(table[1], 2)
+    
+    if len(table) > 1:
+        table[1] = random.sample(table[1], 2)
     
     reservation = {}
     reservation["n"] = table[0][0]
     reservation["s"] = table[0][1]
-    reservation["e"] = table[1][0]
-    reservation["w"] = table[1][1]
-    reservation["table"] = i + 1
     
+    if len(table) > 1:
+        reservation["e"] = table[1][0]
+        reservation["w"] = table[1][1]
+        
+    reservation["table"] = i + 1
     reservations["seat_assignments"].append(reservation)
 
 print(reservations)
